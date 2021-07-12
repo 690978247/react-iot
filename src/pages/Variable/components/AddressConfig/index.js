@@ -1660,6 +1660,7 @@ export default class config extends PureComponent {
 
   openPop = ()=>{
     console.log('open')
+    
     let { popupData, formData } = this.state
     if (popupData.protocolName === 'S7_TCP') {    //  渲染 S7_TCP弹窗
       // 1: 数据区域  2. 寄存器字母块（M/DBX/I/Q/MB/DBB/IB/QB/MW/DBW/IW/QW/MD/DBD/ID/QD） 3.  DB号  4. 地址偏移量   5. 位   6. 长度   7.  地址类型 
