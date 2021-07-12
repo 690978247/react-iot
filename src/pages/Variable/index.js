@@ -945,8 +945,12 @@ class RealTime extends PureComponent{
   }
 
   addressSearch = (value, event, row, codeLen) => {
-    console.log(value)
+    let id = document.getElementById(`address${row.key}`)
+    if (id) {
+      id.blur()
+    }
     this.throttle(this.addressCommit, 1000)(value, event, row, codeLen)
+    
   }
 
   addressCommit = (value, event, row, codeLen) => {
