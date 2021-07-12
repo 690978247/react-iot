@@ -1,0 +1,100 @@
+.PBW-block-item {
+  padding: 5px 0;
+
+  span {
+    display: inline-block;
+    width: 70px;
+  }
+
+  select,
+  input {
+    width: 250px;
+    height: 32px;
+    background: #FFFFFF;
+    border: 1px solid #DCDFE6;
+    border-radius: 2px;
+    padding: 0 5px;
+    outline: 0;
+  }
+
+  input {
+    padding-left: 8px;
+  }
+}
+
+.modal-pane {
+  position: relative;
+  height: 500px;
+  display: flex;
+
+  .tree-pane {
+    width: 180px;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+
+    .tree-header {
+      padding: 0 16px;
+      line-height: 37px;
+      height: 37px;
+      background: #479aed8f;
+      color: #316BA6;
+      font-size: 15px;
+    }
+
+    .modal-tree {
+      flex: 1;
+      background: #F5F7FC;
+      overflow: auto;
+    }
+
+    .ant-tree .ant-tree-treenode {
+      padding-left: 20px;
+      width: 100%;
+
+      &.ant-tree-treenode-selected {
+        .ant-tree-switcher {
+          color: #252525;
+        }
+
+        .ant-tree-title {
+          color: #252525;
+        }
+
+      }
+
+      .ant-tree-node-content-wrapper {
+        flex: 1;
+      }
+    }
+  }
+
+  .table-list {
+    flex: 1;
+    margin-left: 20px;
+
+    .ant-table-content {
+      height: 100%;
+      border-top: 0;
+    }
+
+    .ant-table-thead {
+      .ant-table-cell {
+        height: 37px;
+        line-height: 37px;
+      }
+
+      &>tr {
+        &>th {
+          background: #479aed8f;
+          color: #316BA6;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .ant-table-body {
+      border: 1px solid #DCE4EB;
+    }
+  }
+}

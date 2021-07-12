@@ -1,0 +1,77 @@
+.table-contain {
+  .editable-row {
+    .effective-editor {
+
+      .ant-input,
+      .ant-select-selection-item,
+      .editable-cell-value-wrap {
+        color: #F5AB3A;
+      }
+    }
+    
+    .editable-cell-input-group{
+      display: flex;
+
+      .editable-cell-value-wrap{
+        flex:1;
+      }
+      .edit-cell-btn{
+        margin-left: 8px;
+        border-radius: 4px;
+        padding: 0 8px;
+        background: #f5f7fc;
+        color: #666;
+        letter-spacing: 1px;
+        font-weight: bolder;
+        border-color: #d3d3d3;
+      }
+    }
+
+    .editable-cell-value-wrap {
+      display: block;
+      height: 32px;
+      width: 100%;
+      line-height: 32px;
+      margin-left: -9px;
+      padding: 0 10px;
+      border-radius: 3px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      word-break: keep-all;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      .editable {
+        .editable-cell-value-wrap {
+          background: #F5F8FE;
+          border: 1px solid #DEE2E9;
+        }
+
+        &:hover {
+          .editable-cell-value-wrap {
+            background: #F5F8FE;
+            border: 1px solid #4799ED;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  bottom: 0;
+  right: -5px;
+  cursor: col-resize;
+  z-index: 1;
+}
+
+.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before{
+  background-color: rgba(255, 255, 255, 0.5);
+}

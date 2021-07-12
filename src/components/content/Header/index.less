@@ -1,0 +1,88 @@
+.pageHeader {
+  display: flex;
+  height: 70px;
+  line-height: 70px;
+  background: #EBF1F6;
+  box-shadow: 0 1px 0 0 #cfd7e5;
+  color: #666;
+  position: relative;
+  z-index: 1;
+
+
+  .logo {
+    display: inline-block;
+    width: 207px;
+    text-align: center;
+
+    img {
+      width: 36px;
+      height: 36px;
+      margin: auto;
+      margin-right: 9px;
+    }
+
+    .name {
+      font-size: 19px;
+      font-family: PingFang TC;
+      font-weight: bold;
+      color: #4283FF;
+      vertical-align: middle;
+    }
+  }
+
+  .flexContent {
+    flex: 1;
+  }
+
+  .divider {
+    display: inline-block;
+    width: 1px;
+    height: 27px;
+    line-height: 70px;
+    background-color: #CFDAE3;
+    transform: scaleX(0.5);
+    vertical-align: middle;
+    margin: auto 20px;
+  }
+
+  .userComp {
+    padding: 0 20px;
+  }
+
+  .logout {
+    display: inline-block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      width: 20px;
+      height: 20px;
+      background: url("~assets/img/index/logout.png") no-repeat;
+      background-size: 100%;
+    }
+
+    &:hover {
+      &::before {
+        background: url("~assets/img/index/logout_active.png") no-repeat;
+        background-size: 100%;
+      }
+    }
+
+    &:active {
+      background: #D8E6F1;
+
+      &::before {
+        background: url("~assets/img/index/logout_active.png") no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+.title {
+  height: 50px;
+  line-height: 50px;
+  color: #333;
+  border-bottom: 1px solid #E4E4E4;
+  overflow: hidden;
+
+  .title-contain {
+    display: flex;
+    padding: 0 12px 0 21px;
+  }
+
+  .optGroup {
+    flex: 1;
+    text-align: right;
+  }
+}
+
+.moveNode.ant-tree {
+
+  .ant-tree-list {
+    height: 100%;
+    overflow: hidden;
+
+    .ant-tree-list-holder {
+      height: 100%;
+      overflow: auto;
+
+      .ant-tree-list-holder-inner {
+        padding: 5px 0;
+      }
+    }
+
+  }
+
+  .ant-tree-treenode {
+    &:hover::after {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 11px;
+      width: 14px;
+      height: 14px;
+      background: url("~assets/img/common/move2.png") no-repeat;
+      background-size: 100%;
+    }
+
+    &:active::after {
+      content: "";
+      background: url("~assets/img/common/move2_active.png") no-repeat;
+      background-size: 100%;
+    }
+
+    &.ant-tree-treenode-selected {
+      background: #4270E4;
+      color: #fff;
+
+      &:hover {
+        background-color: #4270E4 !important;
+        color: #fff;
+      }
+
+      &:hover::after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 11px;
+        width: 14px;
+        height: 14px;
+        background: url("~assets/img/common/move2_active.png") no-repeat;
+        background-size: 100%;
+      }
+
+      &:active::after {
+        content: "";
+        background: url("~assets/img/common/move2_active.png") no-repeat;
+        background-size: 100%;
+      }
+
+      .ant-tree-title {
+        .ant-tree-title-operationNode {
+          background: url(~assets/img/variable/more_active.png) no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+
+    &:has(.ant-tree-active) {
+      background-color: yellow;
+    }
+  }
+}
+
+.ant-tree {
+  .ant-tree-treenode {
+    position: relative;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px 0 45px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #252525;
+
+    &:hover {
+      background: #E4EEFF;
+      color: #252525;
+    }
+
+    &:active {
+      background: #E4EEFF;
+      color: #252525;
+    }
+
+    .ant-tree-node-content-wrapper {
+      &:hover {
+        background: none;
+      }
+    }
+
+    &::before {
+      bottom: 0;
+    }
+
+    &.ant-tree-treenode-selected {
+      background: #fff;
+
+      &:hover {
+        background: #E4EEFF;
+      }
+
+      &:active {
+        background: #E4EEFF;
+        color: #fff;
+      }
+
+      .ant-tree-node-selected {
+        background: none;
+      }
+
+      &::before {
+        background: none;
+      }
+    }
+
+    .ant-tree-checkbox {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      margin-top: 0;
+
+      .ant-tree-checkbox-inner {
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.ant-tree {
+  .ant-tree-node-content-wrapper {
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+
+    .ant-tree-iconEle {
+      height: 36px;
+      line-height: 36px;
+    }
+
+    .ant-tree-title {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: keep-all;
+      white-space: nowrap;
+
+      .ant-tree-title-operationNode {
+        position: absolute;
+        right: 0;
+        top: 09px;
+        display: none;
+        margin: auto;
+        width: 18px;
+        height: 18px;
+        line-height: 36px;
+        background: url(~assets/img/variable/more.png) no-repeat;
+        background-size: 100%;
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      .ant-tree-title-operationNode {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.ant-tree-switcher {
+  line-height: 36px;
+}
